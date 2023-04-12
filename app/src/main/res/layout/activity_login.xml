@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auths.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/login_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/number_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="-40dp"
+      android:layout_marginHorizontal="36dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/iv_login">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="12dp"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="25dp"
+              android:text="Enter your number"
+              android:textSize="16sp"
+              android:textColor="@color/black"/>
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:id="@+id/user_no"
+                  android:inputType="number"
+                  android:layout_height="wrap_content"
+                  android:hint="9876..."/>
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <Button
+              android:id="@+id/btn_otp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="5dp"
+              android:layout_margin="2dp"
+              android:background="@drawable/login_back"
+              android:textColor="@color/white"
+              android:text="Sent Opt"/>
+
+      </LinearLayout>
+
+
+  </com.google.android.material.card.MaterialCardView>
+
+     <com.google.android.material.card.MaterialCardView
+      android:id="@+id/otp_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+         android:visibility="gone"
+      android:layout_marginHorizontal="36dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/iv_login">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="12dp"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Enter otp"
+              android:textSize="16sp"
+              android:textColor="@color/black"/>
+
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/user_otp"
+                  android:inputType="number"
+                  android:hint="OTP"/>
+
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <Button
+              android:id="@+id/btn_login"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="5dp"
+              android:layout_margin="2dp"
+              android:background="@drawable/login_back"
+              android:textColor="@color/white"
+              android:text="Login"/>
+
+      </LinearLayout>
+
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
