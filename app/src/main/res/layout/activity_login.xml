@@ -48,7 +48,7 @@
                   android:id="@+id/user_no"
                   android:inputType="number"
                   android:layout_height="wrap_content"
-                  android:hint="9876..."/>
+                  android:hint="Number"/>
 
           </com.google.android.material.textfield.TextInputLayout>
 
